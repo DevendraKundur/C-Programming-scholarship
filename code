@@ -1,0 +1,176 @@
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+
+void main()
+{
+    int annual_income,gender=0,category=0,subcategory=0,education=0,marks=0,disability=0;
+    char name[20];
+    printf("Enter your name: ");
+    scanf("%s",name);
+    printf("Enter your Annual income according to your income certificate: ");
+    scanf("%d",&annual_income);
+    if(annual_income>250000)
+    {
+        printf("No scholarships are available\n");
+        exit(0);
+    }
+    printf("Select your gender: ");
+    printf("\n1.Male\n2.Female\n3.Transgender\n");
+    scanf("%d",&gender);
+    printf("Select your category: ");
+    printf("\n1.General\n2.OBC\n3.SC/ST\n");
+    scanf("%d",&category);
+    if(category==2)
+    {
+        printf("Select Subcategory: ");
+        printf("\n1.cat1\n2.2A\n3.2B\n4.3A\n5.3B\n");
+        scanf("%d",&subcategory);
+    }
+    printf("Select your Education Status: ");
+    printf("\n1.Pre Matric\n2.Post Matric\n");
+    scanf("%d",&education);
+    
+    printf("Select your Aggregate marks: ");
+    printf("\n1.Below 50 percent\n2.Equal and Above 50 percent\n");
+    scanf("%d",&marks);
+    
+    printf("Physical disabilities: ");
+    printf("\n1.Yes\n2.No\n");
+    scanf("%d",&disability);
+    
+    if(annual_income<100000)
+    {
+        if(gender==2)
+        {
+            if(education==2)
+            {
+                if(marks==2)
+                {
+                    printf("\nHello, %s\n ",name);
+                    printf("\t\tThe scholarships available for you are:\n\n");
+                    printf("Kotak Kanya Scholarship\n");
+                    printf("Link: https://kotakeducation.org/kotak-kanya-scholarship/\n");
+                }
+            }
+        }
+    }
+    else
+    {
+        printf("Not eligible for any Scholarships for your data\n");
+    }
+    
+    
+    if(annual_income<100000)
+    {
+        if((category==3)||(category==2))
+        {
+            if(education==1)
+            {
+                printf("\nHello, %s\n ",name);
+                printf("\t\tThe scholarships available for you are:\n\n");
+                printf("1.Central Sponsored Pre Matric\n");               
+                printf("Link: https://scholarships.gov.in/\n");
+                printf("2.NSP Financial Assistance for Education\n");
+                printf("Link: https://scholarships.gov.in/\n");
+            }
+        }
+    }
+    else
+    {
+        printf("Not eligible for any Scholarships for your data\n");
+    }
+    
+    
+    if(annual_income<100000)
+    {
+        if((category==2)||(category==3))
+        {
+            if(education==2)
+            {
+                if(marks==2)
+                {
+                    printf("\nHello, %s\n ",name);
+                    printf("\t\tThe scholarships available for you are:\n\n");
+                    printf("1.Atal Bihari Vajpayee scholarships\nLink: https://scholarshiplogin.in/atal-bihari-vajpayee-scholarship/\n");
+                    printf("2.LIC golden Jubilee Scholarship\nLink: https://licindia.in/Bottom-Links/Golden-Jubilee-Foundation/\n");
+                }
+            }
+        }
+    }
+    else
+    {
+        printf("Not eligible for any Scholarships for your data\n");
+    }
+    
+    
+    if(annual_income<100000)
+    {
+        if((category==2)||(category==3))
+        {
+            if(education==2)
+            {
+                printf("\nHello, %s\n ",name);
+                printf("\t\tThe scholarships available for you are:\n\n");
+                printf("1.Vidyasiri\nLink: https://bcwd.karnataka.gov.in/info-2/Scholarships/Vidyasiri/en\n");
+                printf("2.Jio Scholarships\nLink: https://www.vidyanidhi.org.in/scholarships\n");
+            }
+        }
+    }
+    else
+    {
+        printf("Not eligible for any Scholarships for your data\n");
+    }
+    
+    
+    if(annual_income<100000)
+    {
+        if(category==2)
+        {
+            if(subcategory==3)
+            {
+                if(education==2)
+                {
+                    printf("\nHello, %s\n ",name);
+                    printf("\t\tThe scholarships available for you are:\n\n");
+                    printf("1.Human Welfare Foundation\nLink: https://www.hwfindia.org/scholarship/\n");
+                }
+                
+            }
+        }
+    }
+    else
+    {
+        printf("Not eligible for any Scholarships for your data\n");
+    }
+    
+    
+    if(annual_income<250000)
+    {
+        if(education==1)
+        {
+            printf("\nHello, %s\n ",name);
+            printf("\t\tThe scholarships available for you are:\n\n");
+            printf("1.Pre-Matric scholarship for students with disabilities\n");
+        }
+        else if(education==2)
+        {
+            printf("\nHello, %s\n ",name);
+            printf("\t\tThe scholarships available for you are:\n\n");
+            printf("1.Post-Matric scholarship for students with disabilities\n");
+            printf("2.Scholarship for top class education for students with disability\n");
+            printf("3.NHFDC Trust Funds Scholarship\n");
+            printf("4.AICTE-Saksham Scholarship scheme\n");
+        }
+        else
+        {
+            printf("\nHello, %s\n ",name);
+            printf("\t\tThe scholarships available for you are:\n\n");
+            printf("1.16th Cavincare ability awards\n");
+            printf("2.Scheme for Financial Assistance for skill and Entrepreneurial Development\n");
+            
+        }
+    }
+    
+    printf("\n\n\t\t\t\t\t\tTHANK YOU\n\n");
+}
